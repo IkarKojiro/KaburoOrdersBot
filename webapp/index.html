@@ -1,263 +1,309 @@
-Профессиональная оценка формы с точки зрения **UI/UX и визуального дизайна**:
+<!DOCTYPE html>
+<html>
 
----
+<head>
 
-## Общая оценка
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-**Уровень:** выше среднего (≈7.5–8/10)
-Форма выглядит аккуратно, современно и минималистично. Чёрный фон + голубой акцент создают чистую визуальную иерархию и ощущение бренда. Видно, что дизайн продуман.
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 
----
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-## Сильные стороны 👍
+<style>
 
-### 1. Визуальная иерархия
+body{
+margin:0;
+background:#000;
+color:white;
+font-family:Inter, sans-serif;
+display:flex;
+justify-content:center;
+}
 
-Хорошо читается структура:
+.container{
 
-1. Логотип
-2. Название "kaburo"
-3. Подзаголовок
-4. Поля формы
-5. CTA-кнопка
+width:100%;
+max-width:360px;
 
-Это правильный порядок для лендинговой формы.
+padding:16px 20px 30px 20px;
+text-align:center;
 
-Особенно удачно:
+}
 
-* крупная кнопка внизу — логичное завершение
-* поля одинаковой ширины — аккуратно
-* хороший вертикальный ритм
+/* LOGO */
 
----
+.logo{
 
-### 2. Цветовая схема
+width:150px;
+margin:10px auto 5px auto;
+display:block;
 
-Черный + голубой работают отлично:
+}
 
-* голубой — хороший акцент
-* кнопка заметна сразу
-* нет лишних цветов
-* визуально выглядит "брендово"
+/* HEADER */
 
-Это уровень хороших DTC-брендов.
+.brand{
 
----
+font-size:22px;
+letter-spacing:3px;
+font-weight:400;
+margin-bottom:6px;
 
-### 3. Минимализм
+}
 
-Форма чистая:
+.title{
 
-* нет перегруженности
-* только нужные поля
-* легко воспринимается
-* быстро понятно что делать
+font-size:18px;
+font-weight:500;
+margin-top:6px;
+margin-bottom:4px;
 
-Это правильно для конверсии.
+}
 
----
+.subtitle{
 
-## Слабые места 👎
+color:#9a9a9a;
+font-size:14px;
+margin-bottom:24px;
 
-### 1. Слабый заголовок
+}
 
-Сейчас:
+/* LABELS */
 
-> kaburo
-> заявка на худи
+.label{
 
-Это выглядит как **техническая форма**, а не как бренд.
+text-align:left;
+font-size:13px;
+color:#bbb;
+margin-bottom:6px;
+margin-top:12px;
 
-Лучше было бы:
+}
 
-Примеры:
+/* INPUTS */
 
-* "Оставьте заявку на худи Kaburo"
-* "Предзаказ худи Kaburo"
-* "Получите своё худи Kaburo"
+.field{
 
-Проблема: сейчас нет эмоционального входа.
+width:100%;
+height:54px;
 
----
+border-radius:14px;
+border:1px solid #222;
 
-### 2. Поле "Размер" выглядит вторично
+background:#111;
 
-Dropdown выглядит менее заметным чем текстовые поля.
+color:white;
+font-size:16px;
 
-UX-ошибка:
+padding-left:14px;
 
-Размер — ключевое поле.
+box-sizing:border-box;
 
-Лучше:
+}
 
-* сделать label над полем
-* или кнопки XS S M L XL
+.field:focus{
 
-Это повышает конверсию.
+outline:none;
+border:1px solid #8fdcff;
 
----
+}
 
-### 3. Слабая микроиерархия текста
+/* SIZE BLOCK */
 
-Подпись:
+.sizeContainer{
 
-> заявка на худи
+margin-top:6px;
+margin-bottom:6px;
 
-Слишком мелкая и теряется.
+}
 
-Она должна помогать понять действие.
+/* BUTTON */
 
----
+button{
 
-### 4. Логотип слишком высоко
+width:100%;
+height:58px;
 
-Сейчас:
+margin-top:22px;
 
-Большая пустота сверху.
+border-radius:16px;
+border:none;
 
-Можно сократить примерно на **20–30%**.
+font-size:17px;
+font-weight:600;
 
-Это улучшит фокус.
+background:#8fdcff;
+color:#000;
 
----
+}
 
-### 5. Нет доверия (Trust signals)
+/* TRUST TEXT */
 
-Нет:
+.trust{
 
-* сроков доставки
-* цены
-* информации
-* бренда
-* соцсетей
+margin-top:16px;
+font-size:13px;
+color:#777;
+line-height:1.4;
 
-Форма выглядит немного "анонимной".
+}
 
-Это снижает конверсию.
+/* SPACE */
 
----
+.bottom{
 
-## UX замечания ⚠️
+height:20px;
 
-### 1. "Telegram или телефон"
+}
 
-Это плохая формулировка UX.
+</style>
 
-Пользователь думает:
+</head>
 
-* формат?
-* @username?
-* номер?
-* пробелы?
+<body>
 
-Лучше:
+<div class="container">
 
-**Контакт (Telegram @username или телефон)**
+<img class="logo" src="logo.png">
 
-или
 
-**Telegram / телефон**
+<div class="brand">
 
----
+kaburo
 
-### 2. Нет обязательных полей
+</div>
 
-Нет звездочек:
 
-*
+<div class="title">
 
-Пользователь не знает что обязательно.
+Оставьте заявку на худи Kaburo
 
----
+</div>
 
-### 3. Нет подтверждения действия
 
-Кнопка:
+<div class="subtitle">
 
-> Отправить заявку
+Мы свяжемся с вами для подтверждения заказа
 
-Обычная.
+</div>
 
-Можно усилить:
 
-* "Отправить заявку →"
-* "Заказать худи"
-* "Оформить заявку"
 
----
+<div class="label">
 
-## Визуальные улучшения (быстро дадут +20%)
+Имя *
 
-### 1. Label сверху полей
+</div>
 
-Сейчас placeholder-only.
+<input
+class="field"
+id="name"
+placeholder="Введите имя">
 
-Проблема:
 
-Когда пользователь начинает печатать — он забывает поле.
 
-Лучше:
+<div class="label">
 
-Имя
-[________]
+Размер *
 
----
+</div>
 
-### 2. Кнопка почти идеальная
+<select
+class="field sizeContainer"
+id="size">
 
-Очень хорошая:
+<option value="">
+Выберите размер
+</option>
 
-* размер правильный
-* цвет хороший
-* радиус современный
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
 
-Можно улучшить:
+</select>
 
-Чуть выше контраст текста.
 
----
 
-### 3. Расстояния хорошие
+<div class="label">
 
-Вертикальный ритм:
+Город *
 
-Очень аккуратный.
+</div>
 
-Это профессиональный уровень.
+<input
+class="field"
+id="city"
+placeholder="Ваш город">
 
----
 
-## Что выглядит профессионально ⭐
 
-* минимализм
-* аккуратный spacing
-* цвет
-* кнопка
-* композиция
-* центрирование
+<div class="label">
 
-Это явно не новичковый дизайн.
+Контакт (Telegram @username или телефон) *
 
----
+</div>
 
-## Что выдаёт "не совсем продуктовый дизайн"
+<input
+class="field"
+id="contact"
+placeholder="@username или номер">
 
-* нет доверия
-* слабый заголовок
-* placeholder-only поля
-* dropdown размера
-* нет микроинформации
 
----
 
-## Итог
+<button onclick="sendData()">
 
-Как дизайнер оцениваю:
+Отправить заявку →
 
-**Визуал: 8.5/10**
-**UX: 7/10**
-**Конверсия потенциал: 7/10**
+</button>
 
-После небольших правок может быть **9/10 и выше**.
 
-Если хочешь — могу показать **как выглядела бы версия уровня Shopify premium / Y Combinator стартапа** (с конкретными правками пиксель-в-пиксель).
+
+<div class="trust">
+
+Ответим в Telegram в течение 24 часов
+
+</div>
+
+
+<div class="bottom"></div>
+
+
+</div>
+
+
+
+<script>
+
+function sendData(){
+
+let data={
+
+name:
+document.getElementById("name").value,
+
+size:
+document.getElementById("size").value,
+
+city:
+document.getElementById("city").value,
+
+contact:
+document.getElementById("contact").value
+
+};
+
+Telegram.WebApp.sendData(
+JSON.stringify(data)
+);
+
+Telegram.WebApp.close();
+
+}
+
+</script>
+
+</body>
+
+</html>
