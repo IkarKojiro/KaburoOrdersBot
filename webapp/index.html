@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<style>
+
+body{
+
+margin:0;
+background:#000;
+color:white;
+
+font-family:-apple-system,BlinkMacSystemFont,
+Segoe UI,Roboto;
+
+}
+
+.container{
+
+padding:24px;
+
+max-width:420px;
+
+margin:auto;
+
+}
+
+.logo{
+
+width:110px;
+
+margin:30px auto 20px auto;
+
+display:block;
+
+}
+
+.brand{
+
+text-align:center;
+
+font-size:22px;
+
+letter-spacing:3px;
+
+margin-bottom:6px;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+color:#888;
+
+margin-bottom:30px;
+
+}
+
+input,select{
+
+width:100%;
+
+padding:16px;
+
+margin-top:12px;
+
+border-radius:14px;
+
+border:1px solid #222;
+
+background:#111;
+
+color:white;
+
+font-size:16px;
+
+}
+
+input:focus,select:focus{
+
+outline:none;
+
+border:1px solid #8fdcff;
+
+}
+
+button{
+
+margin-top:26px;
+
+width:100%;
+
+padding:18px;
+
+border-radius:16px;
+
+border:none;
+
+font-size:17px;
+
+font-weight:600;
+
+background:#8fdcff;
+
+color:black;
+
+}
+
+button:active{
+
+transform:scale(0.98);
+
+}
+
+.bottomSpace{
+
+height:40px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img class="logo" src="logo.png">
+
+<div class="brand">
+kaburo
+</div>
+
+<div class="subtitle">
+Заявка на кофту
+</div>
+
+
+<input id="name"
+placeholder="Имя">
+
+
+<select id="size">
+
+<option value="">
+Размер
+</option>
+
+<option>S</option>
+
+<option>M</option>
+
+<option>L</option>
+
+<option>XL</option>
+
+</select>
+
+
+<input id="city"
+placeholder="Город">
+
+
+<input id="contact"
+placeholder="Telegram или телефон">
+
+
+<button onclick="sendData()">
+
+Отправить заявку
+
+</button>
+
+
+<div class="bottomSpace"></div>
+
+
+</div>
+
+
+<script>
+
+function sendData(){
+
+let data={
+
+name:
+document.getElementById("name").value,
+
+size:
+document.getElementById("size").value,
+
+city:
+document.getElementById("city").value,
+
+contact:
+document.getElementById("contact").value
+
+};
+
+Telegram.WebApp.sendData(
+JSON.stringify(data)
+);
+
+Telegram.WebApp.close();
+
+}
+
+</script>
+
+</body>
+
+</html>
