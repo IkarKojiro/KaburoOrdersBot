@@ -1,261 +1,263 @@
-<!DOCTYPE html>
-<html>
+Профессиональная оценка формы с точки зрения **UI/UX и визуального дизайна**:
 
-<head>
+---
 
-<meta charset="UTF-8">
+## Общая оценка
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+**Уровень:** выше среднего (≈7.5–8/10)
+Форма выглядит аккуратно, современно и минималистично. Чёрный фон + голубой акцент создают чистую визуальную иерархию и ощущение бренда. Видно, что дизайн продуман.
 
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
+---
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+## Сильные стороны 👍
 
-<style>
+### 1. Визуальная иерархия
 
-body{
+Хорошо читается структура:
 
-margin:0;
-background:#000;
-color:white;
+1. Логотип
+2. Название "kaburo"
+3. Подзаголовок
+4. Поля формы
+5. CTA-кнопка
 
-font-family:Inter, sans-serif;
+Это правильный порядок для лендинговой формы.
 
-display:flex;
-justify-content:center;
+Особенно удачно:
 
-}
+* крупная кнопка внизу — логичное завершение
+* поля одинаковой ширины — аккуратно
+* хороший вертикальный ритм
 
-.container{
+---
 
-width:100%;
-max-width:360px;
+### 2. Цветовая схема
 
-padding:20px;
+Черный + голубой работают отлично:
 
-text-align:center;
+* голубой — хороший акцент
+* кнопка заметна сразу
+* нет лишних цветов
+* визуально выглядит "брендово"
 
-}
+Это уровень хороших DTC-брендов.
 
+---
 
-.logo {
+### 3. Минимализм
 
-width:150px;
+Форма чистая:
 
-margin:0px auto 0px auto;
+* нет перегруженности
+* только нужные поля
+* легко воспринимается
+* быстро понятно что делать
 
-display:block;
+Это правильно для конверсии.
 
-}
+---
 
+## Слабые места 👎
 
-.brand{
+### 1. Слабый заголовок
 
-font-size:24px;
+Сейчас:
 
-letter-spacing:4px;
+> kaburo
+> заявка на худи
 
-font-weight:300;
+Это выглядит как **техническая форма**, а не как бренд.
 
-margin-bottom:6px;
+Лучше было бы:
 
-}
+Примеры:
 
+* "Оставьте заявку на худи Kaburo"
+* "Предзаказ худи Kaburo"
+* "Получите своё худи Kaburo"
 
-.subtitle{
+Проблема: сейчас нет эмоционального входа.
 
-color:#888;
+---
 
-margin-bottom:30px;
+### 2. Поле "Размер" выглядит вторично
 
-font-size:14px;
+Dropdown выглядит менее заметным чем текстовые поля.
 
-}
+UX-ошибка:
 
+Размер — ключевое поле.
 
-/* одинаковые блоки */
+Лучше:
 
-.field{
+* сделать label над полем
+* или кнопки XS S M L XL
 
-width:100%;
+Это повышает конверсию.
 
-height:56px;
+---
 
-margin-bottom:14px;
+### 3. Слабая микроиерархия текста
 
-border-radius:14px;
+Подпись:
 
-border:1px solid #222;
+> заявка на худи
 
-background:#111;
+Слишком мелкая и теряется.
 
-color:white;
+Она должна помогать понять действие.
 
-font-size:16px;
+---
 
-padding-left:16px;
+### 4. Логотип слишком высоко
 
-box-sizing:border-box;
+Сейчас:
 
-}
+Большая пустота сверху.
 
+Можно сократить примерно на **20–30%**.
 
-.field:focus{
+Это улучшит фокус.
 
-outline:none;
+---
 
-border:1px solid #8fdcff;
+### 5. Нет доверия (Trust signals)
 
-}
+Нет:
 
+* сроков доставки
+* цены
+* информации
+* бренда
+* соцсетей
 
+Форма выглядит немного "анонимной".
 
-button{
+Это снижает конверсию.
 
-width:100%;
+---
 
-height:56px;
+## UX замечания ⚠️
 
-margin-top:10px;
+### 1. "Telegram или телефон"
 
-border-radius:14px;
+Это плохая формулировка UX.
 
-border:none;
+Пользователь думает:
 
-font-size:16px;
+* формат?
+* @username?
+* номер?
+* пробелы?
 
-font-weight:600;
+Лучше:
 
-background:#8fdcff;
+**Контакт (Telegram @username или телефон)**
 
-color:black;
+или
 
-}
+**Telegram / телефон**
 
+---
 
-button:active{
+### 2. Нет обязательных полей
 
-transform:scale(0.98);
+Нет звездочек:
 
-}
+*
 
+Пользователь не знает что обязательно.
 
-.space{
+---
 
-height:30px;
+### 3. Нет подтверждения действия
 
-}
+Кнопка:
 
+> Отправить заявку
 
-</style>
+Обычная.
 
-</head>
+Можно усилить:
 
+* "Отправить заявку →"
+* "Заказать худи"
+* "Оформить заявку"
 
-<body>
+---
 
-<div class="container">
+## Визуальные улучшения (быстро дадут +20%)
 
-<img class="logo" src="logo.png">
+### 1. Label сверху полей
 
+Сейчас placeholder-only.
 
-<div class="brand">
+Проблема:
 
-kaburo
+Когда пользователь начинает печатать — он забывает поле.
 
-</div>
+Лучше:
 
+Имя
+[________]
 
-<div class="subtitle">
+---
 
-заявка на худи
+### 2. Кнопка почти идеальная
 
-</div>
+Очень хорошая:
 
+* размер правильный
+* цвет хороший
+* радиус современный
 
+Можно улучшить:
 
-<input
-class="field"
-id="name"
-placeholder="Имя">
+Чуть выше контраст текста.
 
+---
 
-<select
-class="field"
-id="size">
+### 3. Расстояния хорошие
 
-<option value="">
-Размер
-</option>
+Вертикальный ритм:
 
-<option>S</option>
-<option>M</option>
-<option>L</option>
-<option>XL</option>
+Очень аккуратный.
 
-</select>
+Это профессиональный уровень.
 
+---
 
+## Что выглядит профессионально ⭐
 
-<input
-class="field"
-id="city"
-placeholder="Город">
+* минимализм
+* аккуратный spacing
+* цвет
+* кнопка
+* композиция
+* центрирование
 
+Это явно не новичковый дизайн.
 
-<input
-class="field"
-id="contact"
-placeholder="Telegram или телефон">
+---
 
+## Что выдаёт "не совсем продуктовый дизайн"
 
+* нет доверия
+* слабый заголовок
+* placeholder-only поля
+* dropdown размера
+* нет микроинформации
 
-<button onclick="sendData()">
+---
 
-Отправить заявку
+## Итог
 
-</button>
+Как дизайнер оцениваю:
 
+**Визуал: 8.5/10**
+**UX: 7/10**
+**Конверсия потенциал: 7/10**
 
-<div class="space"></div>
+После небольших правок может быть **9/10 и выше**.
 
-
-</div>
-
-
-<script>
-
-function sendData(){
-
-let data={
-
-name:
-document.getElementById("name").value,
-
-size:
-document.getElementById("size").value,
-
-city:
-document.getElementById("city").value,
-
-contact:
-document.getElementById("contact").value
-
-};
-
-Telegram.WebApp.sendData(
-JSON.stringify(data)
-);
-
-Telegram.WebApp.close();
-
-}
-
-</script>
-
-</body>
-
-</html>
-
-<!-- 111 -->
+Если хочешь — могу показать **как выглядела бы версия уровня Shopify premium / Y Combinator стартапа** (с конкретными правками пиксель-в-пиксель).
