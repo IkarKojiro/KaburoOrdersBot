@@ -1,4 +1,3 @@
-bot.py
-requirements.txt
+bot_poiling.py
 .env
 venv/
