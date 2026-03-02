@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 from telegram import (
     Update,
     InputMediaPhoto,
-    InlineKeyboardMarkup,
-    InlineKeyboardButton,
+    ReplyKeyboardMarkup,
+    KeyboardButton,
     WebAppInfo
 )
 
@@ -70,16 +70,20 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "Свободным 👇👇👇"
     )
 
-    keyboard = InlineKeyboardMarkup([
+    keyboard = ReplyKeyboardMarkup(
         [
-            InlineKeyboardButton(
-                "Оставить заявку",
-                web_app=WebAppInfo(
-                    url="https://kaburo-orders-bot.vercel.app"
+            [
+                KeyboardButton(
+                    "Оставить заявку",
+                    web_app=WebAppInfo(
+                        url="https://kaburo-orders-bot.vercel.app"
+                    )
                 )
-            )
-        ]
-    ])
+            ]
+        ],
+        resize_keyboard=True,
+        is_persistent=True
+    )
 
     await update.message.reply_text(
         text,
